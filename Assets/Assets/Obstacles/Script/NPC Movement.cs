@@ -4,25 +4,67 @@ using UnityEngine;
 
 public class NPCMovements : MonoBehaviour
 {
-    public float movementSpeed = 5; // Speed at which the NPC moves downward
-    public float despawnZone = -9; // Y-coordinate below which the NPC is reset
-    public float respawnHeight = 10; // Y-coordinate where the NPC respawns
-    public float respawnXRange = 5; // Range for random X-position during respawn
+    public GameObject obstaclePairPrefab;
+    public float initialSpawnInterval = 2f;
+    public float minX = -2.5f;
+    public float maxX = 2.5f;
+    public float spawnY = 6f;
+    public float initialGapSize = 3f;
+    public float initialObstacleSpeed = 2f;
 
-    // Update is called once per frame
+    private float spawnInterval;
+    private float obstacleSpeed;
+    private float gapSize;
+    private float difficultyIncreaseRate = 0.1f;
+
+    private ScoreManager scoreManager;
+    private int lastScore = 0;
+    
+    void Start()
+    {
+        scoreManager = FindAnyObjectByType<ScoreManager>();
+        spawnInterval = initialSpawnInterval;
+        obstacleSpeed = initialObstacleSpeed;
+        gapSize = initialGapSize;
+
+        Debug.Log("Obstacle Spawning Started");
+        InvokeRepeating(nameof(SpawnObstaclePair), 1f, spawnInterval);    
+    }
+
     void Update()
     {
-        // Move the NPC downward
-        transform.position += Vector3.down * movementSpeed * Time.deltaTime;
+        int currentScore = scoreManager.GetScore();
 
-        // Check if the NPC has moved below the despawn zone
-        if (transform.position.y < despawnZone)
+        if (currentScore > lastScore)
         {
-            // Generate a random X position within the specified range
-            float randomX = Random.Range(-respawnXRange, respawnXRange);
-
-            // Reset the NPC's position to the new random position
-            transform.position = new Vector3(randomX, respawnHeight, transform.position.z);
+            AdjustDifficulty(currentScore);
+            lastScore = currentScore;
         }
+    }
+
+    void AdjustDifficulty(int score)
+    {
+        spawnInterval = Mathf.Max(0.5f, initialSpawnInterval - (score * difficultyIncreaseRate));
+        obstacleSpeed = Mathf.Min(5f, initialObstacleSpeed + (score * difficultyIncreaseRate));
+        gapSize = Mathf.Max(1.5f, initialGapSize - (score * 0.05f));
+
+        Debug.Log("Obstacle Spawning Cancelled");
+        CancelInvoke(nameof(SpawnObstaclePair));
+        Debug.Log("Obstacle Spawning Started");
+        InvokeRepeating(nameof(SpawnObstaclePair), 1f, spawnInterval);
+        Debug.Log("Difficulty adjusted - Interval: " + spawnInterval + "Gap Size:" + "Obstacle Speed: " + obstacleSpeed);
+    }
+
+    void SpawnObstaclePair()
+    {
+        Debug.Log("Obstacle Spawned");
+        float randomX = Random.Range(minX, maxX);
+        float randomYOffset = Random.Range(-gapSize, gapSize);
+        Vector2 spawnPosition = new Vector2(randomX, spawnY);
+
+        GameObject newObstaclePair = Instantiate(obstaclePairPrefab, spawnPosition, Quaternion.identity);
+
+        //float randomYOffset = Random.Range(-1.5f, 1.5f);
+        newObstaclePair.transform.position = new Vector2(randomX, spawnY + randomYOffset);
     }
 }

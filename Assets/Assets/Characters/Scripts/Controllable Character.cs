@@ -21,12 +21,17 @@ public class ControllableCharacter : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            bubble.velocity = new Vector2(-5, 0);
+            bubble.velocity = new Vector2(-5, 2);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            bubble.velocity = new Vector2(5, 0);
+            bubble.velocity = new Vector2(5, 2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            bubble.velocity = new Vector2(0, 5);
         }
     }
 }
