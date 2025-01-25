@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LandMovement : MonoBehaviour
+public class NPCMovements : MonoBehaviour
 {
     public float movementSpeed = 5;
     public float despawnZone = -9;

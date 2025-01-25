@@ -15,7 +15,10 @@ public class ControllableCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GameObject.Find("Game Over") != null && GameObject.Find("Game Over").activeSelf)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.A))
         {
             bubble.velocity = new Vector2(-5, 0);

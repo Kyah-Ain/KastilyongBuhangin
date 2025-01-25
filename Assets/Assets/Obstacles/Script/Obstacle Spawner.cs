@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public GameObject land;
-    public float spawnRate = 2;
-    private float timer = 0;
+    [Header("Spawn Attributes")]
+    public GameObject rock;
+
+    //[Header("Spawn Settings")]
+    private float spawnRate = 500f;
+    private float timer = 1f;
     //public float heightOffset = 5;
     // Start is called before the first frame update
     void Start()
@@ -17,18 +20,19 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate) {
-            timer = timer + Time.deltaTime;
-        } 
-        else
+        timer += 1;
+        //Debug.Log($"timer{timer}");
+
+        if (timer >= spawnRate)
         {
             spawnPipe();
-            timer = 0;
+            //Debug.Log($"if timer{timer}");
+            timer = 1f;
         }
-    }
+    } 
 
     void spawnPipe()
     {
-        Instantiate(land, new Vector3(Random.Range(-12, 11), transform.position.y, 1), transform.rotation);
+        Instantiate(rock, new Vector3(Random.Range(-12, 12), transform.position.y, 1), transform.rotation);
     }
 }
