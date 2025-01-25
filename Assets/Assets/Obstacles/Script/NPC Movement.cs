@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class NPCMovements : MonoBehaviour
 {
-    public float movementSpeed = 5;
-    public float despawnZone = -9;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float movementSpeed = 5; // Speed at which the NPC moves downward
+    public float despawnZone = -9; // Y-coordinate below which the NPC is reset
+    public float respawnHeight = 10; // Y-coordinate where the NPC respawns
+    public float respawnXRange = 5; // Range for random X-position during respawn
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + (Vector3.down * movementSpeed) * Time.deltaTime;
+        // Move the NPC downward
+        transform.position += Vector3.down * movementSpeed * Time.deltaTime;
 
+        // Check if the NPC has moved below the despawn zone
         if (transform.position.y < despawnZone)
         {
-            Destroy(gameObject);
+            // Generate a random X position within the specified range
+            float randomX = Random.Range(-respawnXRange, respawnXRange);
+
+            // Reset the NPC's position to the new random position
+            transform.position = new Vector3(randomX, respawnHeight, transform.position.z);
         }
     }
 }
