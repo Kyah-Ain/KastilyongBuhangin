@@ -20,14 +20,14 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += 1;
+        timer += 1f;
         //Debug.Log($"timer{timer}");
 
         if (timer >= spawnRate)
         {
             spawnPipe();
             //Debug.Log($"if timer{timer}");
-            timer = 1f;
+            timer = 0;
         }
     } 
 
