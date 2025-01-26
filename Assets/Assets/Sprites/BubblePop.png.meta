@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcadae661844fa4478e6383b866eeaaa
+guid: 1664304760777944f920fdd662c5ee87
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: R_FloatDown (2)_0
+      name: BubblePop_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7684
-        width: 3842
-        height: 3842
+        y: 4100
+        width: 2050
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bba887604aa48d447aef8851b4016b1e
-      internalID: -1835591405
+      spriteID: 41608a53b979aad4b875d7435aa3a59f
+      internalID: 1756078749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_FloatDown (2)_1
+      name: BubblePop_1
       rect:
         serializedVersion: 2
-        x: 3842
-        y: 7684
-        width: 3842
-        height: 3842
+        x: 2050
+        y: 4100
+        width: 2050
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d42137ac2fc56144d9f19855c9713e56
-      internalID: -1463952058
+      spriteID: 873c82024c856f74a8e2f94cd32b870d
+      internalID: 1503622995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_FloatDown (2)_2
+      name: BubblePop_2
       rect:
         serializedVersion: 2
-        x: 7684
-        y: 7684
-        width: 3842
-        height: 3842
+        x: 4100
+        y: 4100
+        width: 2050
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,83 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de22aafb24e91f04d8a16823c4fdaa66
-      internalID: -159472106
+      spriteID: 57525289d1451f0488d581360487699f
+      internalID: 1731943972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_FloatDown (2)_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3842
-        width: 3842
-        height: 3842
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2240f59b21d1be04e821173c2daec472
-      internalID: -783274340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: R_FloatDown (2)_4
-      rect:
-        serializedVersion: 2
-        x: 3842
-        y: 3842
-        width: 3842
-        height: 3842
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 204b59e58d85d8642bf969fb8c709bee
-      internalID: 964503168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: R_FloatDown (2)_5
-      rect:
-        serializedVersion: 2
-        x: 7684
-        y: 3842
-        width: 3842
-        height: 3842
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 420fa22194c2ab740826bbc2109a7c52
-      internalID: 124947236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: R_FloatDown (2)_6
+      name: BubblePop_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 3842
-        height: 3842
+        y: 2050
+        width: 2050
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7b658d2b8303cc4690342e039dfdaf1
-      internalID: -1424907904
+      spriteID: 548edea9392130d42816bc5b2519c35c
+      internalID: -1721733990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_FloatDown (2)_7
+      name: BubblePop_4
       rect:
         serializedVersion: 2
-        x: 3842
-        y: 0
-        width: 3842
-        height: 3842
+        x: 2050
+        y: 2050
+        width: 2050
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f94740bad8fde6b41aa49d82e0d5ad32
-      internalID: 793133173
+      spriteID: bba489839b11b7d4c8ca1dafd3a7127a
+      internalID: 1252470567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_FloatDown (2)_8
+      name: BubblePop_5
       rect:
         serializedVersion: 2
-        x: 7684
-        y: 0
-        width: 3842
-        height: 3842
+        x: 4100
+        y: 2050
+        width: 2050
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b4c51a962471254eb7cbd28c7663e0f
-      internalID: -567686663
+      spriteID: e3afdfe8818210948b1e1db38e375eb7
+      internalID: 736428014
       vertices: []
       indices: 
       edges: []
@@ -309,15 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      R_FloatDown (2)_0: -1835591405
-      R_FloatDown (2)_1: -1463952058
-      R_FloatDown (2)_2: -159472106
-      R_FloatDown (2)_3: -783274340
-      R_FloatDown (2)_4: 964503168
-      R_FloatDown (2)_5: 124947236
-      R_FloatDown (2)_6: -1424907904
-      R_FloatDown (2)_7: 793133173
-      R_FloatDown (2)_8: -567686663
+      BubblePop_0: 1756078749
+      BubblePop_1: 1503622995
+      BubblePop_2: 1731943972
+      BubblePop_3: -1721733990
+      BubblePop_4: 1252470567
+      BubblePop_5: 736428014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
