@@ -1964,6 +1964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubble: {fileID: 1389667347}
+  animator: {fileID: 1389667349}
 --- !u!58 &1389667346
 CircleCollider2D:
   m_ObjectHideFlags: 0
