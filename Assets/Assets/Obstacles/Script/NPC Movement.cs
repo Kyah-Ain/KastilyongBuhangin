@@ -5,6 +5,8 @@ using UnityEngine;
 public class NPCMovements : MonoBehaviour
 {
     public GameObject obstaclePairPrefab;
+    public GameObject BubbleCharac;
+
     public float initialSpawnInterval = 2f;
     public float minX = -2.5f;
     public float maxX = 2.5f;

@@ -9,9 +9,18 @@ public class ControllableCharacter : MonoBehaviour
     public Rigidbody2D bubble;
     public Animator animator;
 
+    //private AudioSource audioSource;
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
         bubble = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();    
     }
@@ -45,6 +54,7 @@ public class ControllableCharacter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            audioSource.PlayOneShot(jumpSound);
             animator.SetTrigger("PindotJump");
             bubble.velocity = new Vector2(0, 5);
             
