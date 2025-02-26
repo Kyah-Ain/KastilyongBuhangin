@@ -10,7 +10,7 @@ public class NPCMovements : MonoBehaviour
     public float initialSpawnInterval = 2f;
     public float minX = -2.5f;
     public float maxX = 2.5f;
-    public float spawnY = 6f;
+    public float spawnY = 110f;
     public float initialGapSize = 3f;
     public float initialObstacleSpeed = 2f;
 
@@ -35,6 +35,8 @@ public class NPCMovements : MonoBehaviour
 
     void Update()
     {
+        if (GameOver.isGameOver) return;
+
         int currentScore = scoreManager.GetScore();
 
         if (currentScore > lastScore)
@@ -59,6 +61,8 @@ public class NPCMovements : MonoBehaviour
 
     void SpawnObstaclePair()
     {
+        if (GameOver.isGameOver) return;
+
         Debug.Log("Obstacle Spawned");
         float randomX = Random.Range(minX, maxX);
         float randomYOffset = Random.Range(-gapSize, gapSize);

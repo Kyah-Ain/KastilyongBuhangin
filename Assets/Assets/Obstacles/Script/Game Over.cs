@@ -6,7 +6,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     public GameObject gameOverText;
     public GameObject gameOverButton;
-
+    public static bool isGameOver = false;
 
     private GameObject player; // Store the player GameObject for resetting
 
@@ -29,6 +29,7 @@ public class GameOver : MonoBehaviour
     private void TriggerGameOver(GameObject player)
     {
         Debug.Log("Game Over!");
+        isGameOver = true;
         this.player = player;
 
         // Activate the Game Over UI object
@@ -64,6 +65,7 @@ public class GameOver : MonoBehaviour
     {
     
         Debug.Log("Retrying game...");
+        isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     
     }

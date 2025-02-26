@@ -20,6 +20,8 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameOver.isGameOver) return;
+
         timer += 1f;
         //Debug.Log($"timer{timer}");
 

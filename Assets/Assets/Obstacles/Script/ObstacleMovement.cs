@@ -8,6 +8,8 @@ public class ObstacleMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameOver.isGameOver) return;
+
         transform.position += Vector3.down * speed * Time.deltaTime;
 
         if (transform.position.y < -12f)
