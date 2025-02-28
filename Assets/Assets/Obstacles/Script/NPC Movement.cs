@@ -41,23 +41,23 @@ public class NPCMovements : MonoBehaviour
 
         if (currentScore > lastScore)
         {
-            AdjustDifficulty(currentScore);
+            //AdjustDifficulty(currentScore);
             lastScore = currentScore;
         }
     }
 
-    void AdjustDifficulty(int score)
-    {
-        spawnInterval = Mathf.Max(0.5f, initialSpawnInterval - (score * difficultyIncreaseRate));
-        obstacleSpeed = Mathf.Min(5f, initialObstacleSpeed + (score * difficultyIncreaseRate));
-        gapSize = Mathf.Max(1.5f, initialGapSize - (score * 0.05f));
+    //void AdjustDifficulty(int score)
+    //{
+        //spawnInterval = Mathf.Max(0.5f, initialSpawnInterval - (score * difficultyIncreaseRate));
+        //obstacleSpeed = Mathf.Min(5f, initialObstacleSpeed + (score * difficultyIncreaseRate));
+        //gapSize = Mathf.Max(1.5f, initialGapSize - (score * 0.05f));
 
-        Debug.Log("Obstacle Spawning Cancelled");
-        CancelInvoke(nameof(SpawnObstaclePair));
-        Debug.Log("Obstacle Spawning Started");
-        InvokeRepeating(nameof(SpawnObstaclePair), 1f, spawnInterval);
-        Debug.Log("Difficulty adjusted - Interval: " + spawnInterval + "Gap Size:" + "Obstacle Speed: " + obstacleSpeed);
-    }
+        //Debug.Log("Obstacle Spawning Cancelled");
+        //CancelInvoke(nameof(SpawnObstaclePair));
+        //Debug.Log("Obstacle Spawning Started");
+        //InvokeRepeating(nameof(SpawnObstaclePair), 1f, spawnInterval);
+        //Debug.Log("Difficulty adjusted - Interval: " + spawnInterval + "Gap Size:" + "Obstacle Speed: " + obstacleSpeed);
+    //}
 
     void SpawnObstaclePair()
     {

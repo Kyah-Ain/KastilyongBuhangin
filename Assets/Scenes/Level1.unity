@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 8566922}
   - component: {fileID: 8566921}
   - component: {fileID: 8566920}
+  - component: {fileID: 8566924}
   m_Layer: 5
   m_Name: Retry Button
   m_TagString: Untagged
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8566924}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: RetryGame
         m_Mode: 1
@@ -255,6 +256,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 106.64, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8566924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59907057979c454895f520f0771d42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  gameOverText: {fileID: 0}
+  gameOverButton: {fileID: 0}
 --- !u!1 &10895537
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +429,7 @@ GameObject:
   - component: {fileID: 28220653}
   - component: {fileID: 28220652}
   - component: {fileID: 28220651}
+  - component: {fileID: 28220654}
   m_Layer: 5
   m_Name: Return Button
   m_TagString: Untagged
@@ -484,7 +501,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 28220654}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: QuitToMenu
         m_Mode: 1
@@ -534,6 +551,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28220649}
   m_CullTransparentMesh: 1
+--- !u!114 &28220654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28220649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59907057979c454895f520f0771d42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  gameOverText: {fileID: 0}
+  gameOverButton: {fileID: 0}
 --- !u!1 &265227047
 GameObject:
   m_ObjectHideFlags: 0
